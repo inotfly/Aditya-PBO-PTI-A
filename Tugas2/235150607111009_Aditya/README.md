@@ -1,8 +1,8 @@
 # 📁 Tugas 2 : Class and Object
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Aditya             
+NIM  : 235150607111009
 
 ## 📤 Submission
 
@@ -18,5 +18,4 @@ Fitur Aplikasi Program :
 3. menampilkan buku yang ada di setiap kategori
 
 ## 🔗 Link Penjelasan Tugas
-
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://youtu.be/A8ntphfQ7Bg
