@@ -33,6 +33,6 @@ public class Main {
         System.out.println("Jumlah bacaan per hari: " + membaca.getKata());
 
         double waktu = membaca.hitungHariUntukMenghabiskanBuku();
-        System.out.println("Waktu yang dibutuhkan untuk membaca buku: " + waktu + " hari.");
+        System.out.println("Waktu yang dibutuhkan untuk menulis buku: " + waktu + " hari.");
     }
 }
