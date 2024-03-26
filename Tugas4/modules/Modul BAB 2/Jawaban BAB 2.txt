@@ -1,0 +1,179 @@
+A. 
+1. Lakukan percobaan constructor diatas dan benahi jika menemukan kesalahan!
+    Ada yang salah pada cunstructor di class Student pada awalnya cunstructor tersebut tidak sama dengan
+    nama class di mainstudent tersebut  dan tidak bisa di jalankan dan nama di class student hanya typo di S besar
+    dan kecil dan juga di printlistnya
+    yang awalnya 
+    System.out.println()
+2. Tambahkan constructor pada class Student dengan parameter yang mempunyai parameter 
+   masing masing nilai dari mata pelajaran yang ada! Kemudian buat contoh objeknya pada main Class!
+    menambahkan parameter di public student dan memberi nilai default di setiap mapelnya
+    Student.java
+    public Student(String n, String a, int ag, double mtk, double big, double science) {
+        name = n;
+        address = a;
+        age = ag;
+        mathGrade = mtk;
+        englishGrade = big;
+        scienceGrade = science;
+    }
+    dan 
+    MainStudent.java
+            Student mamad = new Student("Mamad", "Bandung", 99, 10, 98, 79);
+            mamad.displayMessage();
+3. Tambahkan method dengan nilai balikan berupa boolean pada class student bernama statusAkhir 
+untuk menentukan apakah siswa tersebut remidi atau tidak. Ketentuannya adalah jika nilai lebih 
+dari atau sama dengan 61 adalah lolos sedangkan nilai kurang dari atau sama dengan 60 adakah remidi. 
+Nilai yang di cari adalah nilai rata rata untuk semua mapel. Kemudian nilai pada method statusAkhir 
+tampilkan pada method displayMessage!
+    public boolean statusAkhir(){
+            return Average >= 61;
+        }
+
+    displayMessage(){
+        ...
+        System.out.println("Status :" + (NilaiAkhir() ? "Lolos" : "Remidi"));
+    }
+4. Bagaimana cara memasukkan jumlah siswa sesuai dengan keinginan user?
+Tuliskan kodenya dengan inputan user yang interaktif! (key : menggunakan array)
+    Scanner sc = new Scanner(System.in);
+        int jumlahSiswa = sc.nextInt();
+        Student[] siswa = new Student[jumlahSiswa];
+        for (int i = 0; i < jumlahSiswa; i++) {
+            System.out.println("Siswa ke-" + (i + 1));
+
+            System.out.print("Nama: ");
+            String nama = sc.nextLine();
+
+            System.out.print("Alamat: ");
+            String alamat = sc.nextLine();
+
+            System.out.print("Umur: ");
+            int umur = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Nilai Matematika: ");
+            double nilaimate = sc.nextDouble();
+
+            System.out.print("Nilai Bahasa Inggris: ");
+            double nilaieng = sc.nextDouble();
+
+            System.out.print("Nilai IPA: ");
+            double nilaiipa = sc.nextDouble();
+            sc.nextLine();
+
+            siswa[i] = new Student(nama, alamat, umur, nilaimate, nilaieng, nilaiipa);
+        }
+5. Bagaimana cara menghitung banyaknya objek yang kita buat dari sebuah menginstance objek dari mein class? 
+Tuliskan kodenya kemudian tampilkan informasinya dengan memanggil method jumlahObjek() bertipe void!
+    //membuat atributte count di class
+    ...
+    private static int count = 0;
+
+    //menambahkan pada konstruktor
+    ...
+    count++;
+
+    //methodnya
+    public static void jumlahObjek(){
+        System.out.println("Jumlah Objek siswa yang dibuat: " + count);
+    }
+
+    Dan pada class main menambhakan objek student
+        Student anna = new Student();
+        Student chris = new Student();
+        Student david = new Student();
+
+        Student.jumlahObjek();
+
+
+B. Instance method
+1. Lakukan percobaan constructor diatas dan benahi jika menemukan kesalahan!
+    Kesalahannya ada pada source code Ini 
+    ...
+        System.out.println("R1.isRasional: " + R1.isRasional());
+        System.out.println("R2.isRasional: " + R1.isRasional());
+    
+    Seharusnya yang kedua adalah R2.isRasional(), bukan R1.isRasional(). Perbaikannya seperti berikut
+        System.out.println("R1.isRasional: " + R1.isRasional());
+        System.out.println("R2.isRasional: " + R2.isRasional());
+
+2. Tambahkan method untuk operator <, <=, >= !
+    Yang pertama-tama menambhakan method berikut untuk mengembalikan nilai "true" 
+    jika objek "Rasional1" kurang dari "kurangDari".
+    
+    ...
+    // Operator <
+    public boolean lessThan(Rasional kurangDari) {
+        return (pembilang * kurangDari.penyebut < penyebut * kurangDari.pembilang);
+    }
+    ...
+
+    kemudian menambhkan method selanjutnya untuk mengembalikan nilai "true" 
+    jika "Rasional1" kurang dari atau sama dengan "kurangSama".
+
+    ...
+    // Operator <=
+    public boolean lessThanOrEqual(Rasional kurangSama) {
+        return (pembilang * kurangSama.penyebut <= penyebut * kurangSama.pembilang);
+    }
+    ...
+
+    dan yang terakhir menabahkan method untuk mengembalikan nilai "true" 
+    jika "Rasional" lebih besar atau sama dengan "besarSama"
+
+    ...
+    // Operator >=
+    public boolean greaterThanOrEqual(Rasional besarSama) {
+        return (pembilang * besarSama.penyebut >= penyebut * besarSama.pembilang);
+    }
+    ...
+
+3. Ubah method sederhana pada baris 25 – 30 yang awalnya 
+adalah menggunakan while menjadi for!
+    Tinggal menggubah nya yang awalnya
+            while (B != 0){
+            temp = A % B; 
+            A = B;
+            B = temp;
+        }
+    Menjadi seperti ini :
+            for (;B != 0;){
+            temp = A % B; 
+            A = B;
+            B = temp;
+        }
+4. Tambahkan method untuk operasi -, * , / !
+    // Operator -
+    public Rasional subtract(Rasional o) {
+        int newPembilang = pembilang * o.penyebut - penyebut * other.pembilang;
+        int newPenyebut = penyebut * o.penyebut;
+        return new Rasional(newPembilang, newPenyebut);
+    }
+
+    // Operator *
+    public Rasional multiply(Rasional p) {
+        int newPembilang = pembilang * p.pembilang;
+        int newPenyebut = penyebut * p.penyebut;
+        return new Rasional(newPembilang, newPenyebut);
+    }
+
+    // Operator /
+    public Rasional divide(Rasional q) {
+        if (q.pembilang == 0) {
+            throw new IllegalArgumentException("Tidak bisa dibagi dengan nol.");
+        }
+        int newPembilang = pembilang * q.penyebut;
+        int newPenyebut = penyebut * q.pembilang;
+        return new Rasional(newPembilang, newPenyebut);
+    }
+
+
+
+
+   
+
+
+    
+
+

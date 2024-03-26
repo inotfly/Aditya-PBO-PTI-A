@@ -1,0 +1,47 @@
+A. 
+1.	Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Tidak terjadi kesalahan !
+
+2.	Jika pada baris 7, pada parameter double value dan
+double value2 di hapus dan di ganti menjadi int a dan int b apa yang terjadi? Jelaskan!
+    akan terjadi compile error karena nama variabel sama dengan baris 4
+    dan juga itu bertentangan dengan konsep overloading, di mana dapat memiliki 
+    metode yang sama tapi parameter yang berbeda.
+3. Rubah method pada baris ketujuh menjadi method bertipe void, 
+dan lakukan juga perubahan main method.
+    sebelumnya 'hitungluas' memiliki tipe 'double' yang mengembalikan nilai bertipe 'double'
+    dan setelah itu mengubahnya ke 'void' yang tidak mengembalikan nilai.
+    setelah itu, ganti 'return' pada 'hitungluas' diganti dengan
+    'System.out.println()' untuk mecetak pada terminal dari hasilnya.
+
+B.
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Tidak terjadi kesalahan
+
+
+2. Pada class lingkaran Tambahkan constructor dengan parameter int tinggi, apa yang terjadi dan jelaskan!
+    terjadi error karena terdapat variabel yang sama dalam constructor yang sama yaitu integer.
+    ...
+    public lingkaran(int tinggi) {
+         this.tinggi = tinggi;
+    }
+    ...
+
+3. Pada class lingkaran tambahkan constrctor dengan tipe data String alas dan String tinggi, 
+kemudian tambahkan method untuk melakukan parsing atau perubahan tipe data dari String menjadi integer. 
+Setelah itu pada method main lakukan instansiasi objek dengan nama objek Lstring dengan memanggil constructor 
+bertipe data String. Jelaskan!
+Jawab :
+menambahkan method seperti berikut :
+    ...
+    public lingkaran(String alas, String tinggi){
+        this.alas = parseToInt(alas);
+        this.tinggi = parseToInt(tinggi);
+    }
+    ...
+setelah itu panggil di mainlingkaran dengan code seperti ini
+        lingkaran baru = new lingkaran(6, 12);
+        baru.displayMessage();
+tidak terjadi error sama sekali dan constrctor yang telah di tambhkan meminta format integer
+
+    
