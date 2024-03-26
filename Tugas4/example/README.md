@@ -1,16 +1,16 @@
 # 📁 Tugas 4 : Constructor, Instance Method & Method Overloading
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Aditya Yoga Pratama Putra
+NIM  : 235150607111009
 
 ## 📤 Submission
 
-Tema yang dipilih : 
+Tema yang dipilih : Kendaraan
 Class Diagram yang dibuat : 
-1. Class Diagram 1
-2. Class Diagram 2
-dst
+1. Class Diagram Mobil
+2. Class Diagram Truk
+3. Class Diagram Peswat
 
 ## Implementasi CRUD
 
