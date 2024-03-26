@@ -4,7 +4,7 @@ public class RasionalDemo {
         Rasional R2 = new Rasional(1, 3);
 
         System.out.println("R1.isRasional: " + R1.isRasional());
-        System.out.println("R2.isRasional: " + R1.isRasional());
+        System.out.println("R2.isRasional: " + R2.isRasional());
         System.out.println();
 
         System.out.println("R1 > R2 : " + R1.moreThan(R2));
