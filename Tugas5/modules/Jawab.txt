@@ -1,0 +1,83 @@
+A. Encapsulation 1 
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Jawab :
+    Ada beberapa kesalahan yang ada di Test.java :
+    yang pertama yaitu pada "s1.setMark("90");
+    yang seharusnya setMark itu nilainya int tidak perlu menggunakan tanda ""
+    karena tanda itu untuk String
+    kemudian yang kedua yaitu untuk mencetak atau membaca nilai di s1Mark dan s1Name
+    menggunakan getName() dan getMark untuk mengambil nilai dari "Student"
+
+2. Jika pada baris 6 s1.setName diubah menjadi s1.getName apa yang terjadi? jelaskan! 
+Jawab :
+    Compilenya akan berjalan karena getName itu mengembalikan nilai dari objek student dan
+    menggunakan setName akan error karena tidak mengembalikan nilai
+
+3. Setelah diperbaiki, ubahlah hak akses pada baris 4 (pada class Student)  menjadi private 
+apa yang terjadi jika class Test dijalankan? Jelaskan
+Jawab :
+    Jika hak akses pada baris 4 (pada class Student) diubah menjadi private, maka atribut name 
+    dan mark akan tidak dapat diakses langsung dari luar kelas Student. Ini akan mempengaruhi kelas Test, 
+    karena kelas Test mencoba untuk mengakses atribut name dan mark dari objek Student
+4. Jika kedua kelas diatas terdapat dalam package yang sama apakah konsep enkapsulasi 
+tetap berfungsi? jelaskan! 
+Jawab : 
+    Tetap berfungsi, karena Kedua class masih dapat berhubungan melalui metode-metode publik yang disediakan oleh 
+    kelas Student, seperti getName() dan getMark(), yang sesuai dengan prinsip enkapsulasi. 
+
+B. Encapsulation 2 
+Pertanyaan 
+1. Method apakah yang menjadi accessor (getter) ?
+Jawab :
+    Method getLoad dan getMaxLoad
+
+2.
+Jawab : 
+    compilenya error karena atribut load itu private tidak bisa diakses langsung
+    Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+        The field Vehicle1.load is not visible
+
+        at Testvehicle1.main(Testvehicle1.java:5)
+
+3. Ubahlah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi public.  
+Jalankan program, apakah output dari program tersebut?
+a. Jawab :
+        Creating a vehicle with a 10,000 kg maximumload.
+        Add load(100kg) : 500.0
+        Add box #1 (500kg) : true
+        Add box #2 (250kg) : true
+        Add box #3 (5000kg) : true
+        Add box #4 (4000kg) : false
+        Add box #5 (300kg) : true
+        Vehicle load is 6550.0kg
+b. Jawab :
+        Creating a vehicle with a 10,000 kg maximumload.
+        Add box #1 (500kg) : true
+        Add box #2 (250kg) : true
+        Add box #3 (5000kg) : true
+        Add load(100kg) : 500.0
+        Add box #4 (4000kg) : true
+        Add box #5 (300kg) : true
+        Vehicle load is 4800.0kg
+
+4. Ulangi  instruksi  pada  nomer  4  dengan  mengubah  tipe  data  pada  atribut  load  dan  maxload 
+pada class Vehicle1 menjadi protected.
+Jawab :
+Dengan mengubah atribut load dan maxLoad menjadi protected, sekarang dapat mengaksesnya langsung 
+dari kelas turunan (subclass), tetapi tidak dari kelas di luar paket tempat kelas Vehicle1 berada.
+    
+    Yang awalnya 
+    private double load, maxLoad;
+    menjadi 
+    protected double load, maxLoad;
+
+5. Ulangi  instruksi  pada  nomer  4  dengan  mengubah  tipe  data  pada  atribut  load  dan  maxload 
+pada class Vehicle1 menjadi default.
+Jawab : 
+Dengan mengubah tipe data atribut load dan maxLoad menjadi default, mereka akan dapat diakses dari kelas
+dalam paket yang sama, tetapi tidak dari luar paket
+    
+    awalnya 
+    protected double load, maxLoad;
+    menjadi 
+     double load, maxLoad;
