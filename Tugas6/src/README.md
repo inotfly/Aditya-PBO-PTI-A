@@ -1,8 +1,8 @@
 # 📁 Tugas 6 : Inheritance
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Aditya   
+NIM  : 235150607111009
 
 ## 🔗 Link Penjelasan Tugas
 
