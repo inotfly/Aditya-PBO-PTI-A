@@ -1,8 +1,8 @@
 # 📁 Tugas 7 : Polymorphisme
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Aditya Yoga         
+NIM  : 235150607111009
 
 ## 🔗 Link Penjelasan Tugas
 
