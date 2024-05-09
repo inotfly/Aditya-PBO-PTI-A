@@ -1,8 +1,8 @@
 # 📁 Tugas 8 : Upcasting Downcasting
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Aditya Yoga Pratama Putra             
+NIM  : 235150607111009
 
 ## 🔗 Link Penjelasan Tugas
 
